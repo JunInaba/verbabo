@@ -1,0 +1,26 @@
+<html>
+<body>
+	<%= form_for(@comment) do | f | %>
+		<%= f.label :name %>
+		<%= f.text_field :name %><br>
+		<%= f.text_field :comment %>
+		<%= f.hidden_field :thread_board_id, :value => @threadBoard.id%>
+
+
+		<%= f.submit "Send new comment!" %>
+	<% end %>
+
+
+	<% @comments.each do | comment | %>
+		<div>
+			<%= comment.name %>
+			「<%= comment.comment %>」
+		</div>
+	<% end %>
+
+	<%= debug(params) %>
+
+</body>
+</html>
+
+

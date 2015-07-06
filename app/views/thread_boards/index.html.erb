@@ -1,0 +1,21 @@
+<html>
+<body>
+	<%= form_for(@threadBoard) do | f | %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+
+		<%= f.submit "Create new thread!" %>
+	<% end %>
+
+
+	<% @threadBoards.each do | threadboard | %>
+		<div>
+			<%= link_to threadboard.title, thread_board_path(threadboard.id) %>
+			<%= threadboard.title %>
+		</div>
+	<% end %>
+
+	<%= debug(params) %>
+
+</body>
+</html>

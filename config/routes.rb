@@ -1,5 +1,9 @@
 Verbabo::Application.routes.draw do
+  get "comments/new"
+  resources :thread_boards
+  resources :comments
   get "thread_boards/new"
+  get "thread_boards/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
