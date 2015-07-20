@@ -1,8 +1,3 @@
-// Place all the styles related to the Comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .username{
 	white-space:nowrap;
 }
@@ -11,12 +6,15 @@
 	height:auto;
 }
 
-#footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 10%;
-}
+   #footer {
+        /* containerからの絶対位置を定義 */
+        position: fixed;
+
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        margin: 0; padding: 0;
+    }
 
 #container {
 	width: auto; 
